@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+body {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    background: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Product_form {
+    grid-column: 1/6;
+    margin: 2rem 0;
+    background-color: rgba(15, 16, 17, 0.495)
+}
+#Output_form {
+    grid-column: 6/13;
+    margin: 3rem 1rem;
+}
+/* =============================== Title & Paragraph Styling =============================== */
+ 
+h1 {
+   text-align: center;
+   grid-column: 5/9;
+   color: white;
+}
+h2 {
+    grid-column: 5/9;
+    margin: 1rem 1rem;
+    color: white;
+}
+#Success_Result {
+    color: #20a620;
+    margin: 1rem 1rem;
+}
+#Failed_Result {
+    color: red;
+    margin: 1rem 1rem;
+}
+p {
+    color: red;
+    margin: 0 1rem;
+}
+
+/* =============================== Form_grid_and_styling =============================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+input {
+    margin: 1rem 1rem;
+    padding-left: 1rem;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 3rem;
+    background-color: #ffffff;
+}
+div {
+    display: flex;
+    flex-direction: column;
+}
+::placeholder {
+    color: black;
+}
+select {
+    margin: 1rem 1rem;
+    padding-left: 1rem;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 3rem;
+    background-color: #fefefe;
+}
+#promotion {
+   flex-direction: row;
+   gap: 1rem;
+   margin: 0 1rem;
+}
+#Promo_Y , #Promo_N {
+    margin: 0;
+    width: 1rem;
+    height: 1rem;
+}
+button {
+    margin: 1rem 1rem;
+    height: 2rem;
+    border: none;
+    border-radius: 3rem;
+    color: white;
+    background-color: #1c61f8;
+}
+table {
+    background-color: #3e3333;
+}
+tr {
+    text-align: center;
+    color: white;
+    background-color: rgb(52, 44, 44);
+    
+}
+tbody button {
+    width: 5rem;
+}
+
+#Update_btn {
+    display:  none;
+}
+
+/* ================== Modal ================== */
+
+#modal {
+    grid-column: 3/12;
+    display: none;
+    margin: 5rem 0;
+    background-color: rgba(33, 29, 29, 0.491);
+}
+span {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    margin: 1rem;
+}
+label {
+    color: white;
+}
+#Art_Section {
+    grid-column: 5/9;
+    margin: 13rem 0;
+    background-color: rgba(67, 38, 20, 0.76)
+}
+#Art_Section p {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 900;
+}
+#Art_Section span {
+    color: #ffffff;
+    padding-left: 2rem;
+    font-weight: 400;
+    font-size: 18px;
+}
+.Pro_info {
+   width: 50rem;
+}
+@media screen and (max-width:430px) {
+    * {
+        font-size: 10px;
+    }
+}

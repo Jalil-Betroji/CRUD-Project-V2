@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crud Project V2</title>
+</head>
+<body>
+   
+    <section id="Product_form">
+        <form autocomplete="on">
+            <h1>Please fulfill your Product infos below</h1>
+            <p id="Result"></p>
+            <div class="input">
+            <input type="text" id="name" placeholder="Name" >
+            <p id="Name_ER"></p>
+            <input type="text" id="marke" placeholder="Marke" >
+            <p id="Marke_ER"></p>
+            <input type="date" id="D_Production" placeholder="jj/mm/aaaa" >
+            <p id="Prduction_ER"></p>
+            <select name="--Please select the Product type--" id="select" >
+                <option value="" hidden>--Please select the Product type--</option>
+                <option  value="hygiène et toilette" class="type">hygiène et toilette</option>
+                <option  value="soins esthétiques" class="type">soins esthétiques</option>
+                <option  value="produits solaires" class="type">produits solaires</option>
+                <option  value="beauté des mains et des pieds" class="type">beauté des mains et des pieds</option>
+                <option  value="produits de maquillage" class="type">produits de maquillage</option>
+                <option  value="entretien capillaires" class="type">entretien capillaires</option>
+                <option  value="parfums" class="type">parfums</option>
+            </select>
+            <p id="Type_ER"></p>
+            <input type="number" id="prix" placeholder="Prix" >
+            <p id="Prix_ER"></p>
+            <h2>Promotion</h2>
+            <div id="promotion">
+            <input type="radio" value="Yes" name="promotion" id="Promo_Y">
+            <label>Yes</label>
+            <input type="radio" value="No" name="promotion" id="Promo_N">
+            <label>No</label>
+            </div>
+            <p id="Promotion_ER"></p>
+        </div>
+            <button id="Add_btn">Add Product</button>
+        </form> 
+    </section>
+    <section id="Output_form">
+        <div class="Output">
+        <table id="Table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Marke</th>
+              <th>Date Production</th>
+              <th>Type</th>
+              <th>Prix</th>
+              <th>Promotion</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+      </div>
+   </section>
+    <section id="modal">
+        <div id="id01" class="modal">
+            <span onclick="HideModal()" title="Close Modal">×</span>
+            <form class="modal-content" action="/action_page.php">
+              <div class="container"></div>
+                <p style="text-align: center;">Are you sure you want to delete your account?</p>
+              
+                <div>
+                  <button type="button" onclick="Cancel()" class="cancelbtn">Cancel</button>
+                  <button type="button" id="delete_Pro" class="deletebtn">Delete</button>
+                </div>
+              </div>
+            </form>
+          </div>
+    </section>
+    <section id="Art_Section">
+        <div id="Pro_info">
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
