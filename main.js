@@ -82,11 +82,11 @@ function ShowDataBase() {
 Create_P.addEventListener("click", (e) => {
   e.preventDefault();
 
-  validte(); // we called the validation function
+  //validte();  we called the validation function
 
   // ===================== Create_Product ================
 
-  if (arr.length === 6 && mood === "create") {
+  if (mood === "create") {
     // this part is for creating a new product
     console.log(arr);
     const New_Pro = new Newproduct(
@@ -117,7 +117,7 @@ Create_P.addEventListener("click", (e) => {
     Result.style.backgroundColor = "white";
     arr = [];
     ShowDataBase();
-  } else if (arr.length === 6 && mood === "update") {
+  } else if (mood === "update") {
     // this part is for updating an existing product
     Add_Pro[temp].name = Name.value;
     Add_Pro[temp].marke = Marke.value;
@@ -186,70 +186,70 @@ function EditData(i) {
   temp = i;
 }
 
-function validte() {
-  // ======================================= Name_Validation ====================================
+// function validte() {
+//   // ======================================= Name_Validation ====================================
 
-  if (Name.value === "") {
-    document.getElementById("Name_ER").innerHTML = "required field";
-  } else if (!Name_Regex.test(Name.value)) {
-    document.getElementById("Name_ER").innerHTML =
-      "You can't use special characters";
-  } else {
-    document.getElementById("Name_ER").innerHTML = "";
-    arr.push(true);
-  }
+//   if (Name.value === "") {
+//     document.getElementById("Name_ER").innerHTML = "required field";
+//   } else if (!Name_Regex.test(Name.value)) {
+//     document.getElementById("Name_ER").innerHTML =
+//       "You can't use special characters";
+//   } else {
+//     document.getElementById("Name_ER").innerHTML = "";
+//     arr.push(true);
+//   }
 
-  // ====================================== Marke validation ===============================
+//   // ====================================== Marke validation ===============================
 
-  if (Marke.value === "") {
-    document.getElementById("Marke_ER").innerHTML = "required field";
-  } else if (M_Regex.test(Name.value) === false) {
-    document.getElementById("Marke_ER").innerHTML = "Only Letters Allowed";
-  } else {
-    document.getElementById("Marke_ER").innerHTML = "";
-    arr.push(true);
-  }
+//   if (Marke.value === "") {
+//     document.getElementById("Marke_ER").innerHTML = "required field";
+//   } else if (M_Regex.test(Name.value) === false) {
+//     document.getElementById("Marke_ER").innerHTML = "Only Letters Allowed";
+//   } else {
+//     document.getElementById("Marke_ER").innerHTML = "";
+//     arr.push(true);
+//   }
 
-  // ================ Production_Validation ====================
+//   // ================ Production_Validation ====================
 
-  if (Production.value === "") {
-    document.getElementById("Prduction_ER").innerHTML = "Required field";
-  } else {
-    document.getElementById("Prduction_ER").innerHTML = "";
-    arr.push(true);
-  }
+//   if (Production.value === "") {
+//     document.getElementById("Prduction_ER").innerHTML = "Required field";
+//   } else {
+//     document.getElementById("Prduction_ER").innerHTML = "";
+//     arr.push(true);
+//   }
 
-  // ================ Type_Validation ====================
+//   // ================ Type_Validation ====================
 
-  if (Type.value === "") {
-    document.getElementById("Type_ER").innerHTML = "Required field";
-  } else {
-    document.getElementById("Type_ER").innerHTML = "";
-    arr.push(true);
-  }
+//   if (Type.value === "") {
+//     document.getElementById("Type_ER").innerHTML = "Required field";
+//   } else {
+//     document.getElementById("Type_ER").innerHTML = "";
+//     arr.push(true);
+//   }
 
-  // ================ Prix_Validation ====================
+//   // ================ Prix_Validation ====================
 
-  if (Price.value === "") {
-    document.getElementById("Prix_ER").innerHTML = "Required field";
-  } else {
-    document.getElementById("Prix_ER").innerHTML = "";
-    arr.push(true);
-  }
+//   if (Price.value === "") {
+//     document.getElementById("Prix_ER").innerHTML = "Required field";
+//   } else {
+//     document.getElementById("Prix_ER").innerHTML = "";
+//     arr.push(true);
+//   }
 
-  // ================ Promotion_Validation ====================
+//   // ================ Promotion_Validation ====================
 
-  if (
-    document.getElementById("Promo_Y").checked === false &&
-    document.getElementById("Promo_N").checked === false
-  ) {
-    document.getElementById("Promotion_ER").innerHTML =
-      "You must check yes or no";
-  } else {
-    document.getElementById("Promotion_ER").innerHTML = "";
-    arr.push(true);
-  }
-}
+//   if (
+//     document.getElementById("Promo_Y").checked === false &&
+//     document.getElementById("Promo_N").checked === false
+//   ) {
+//     document.getElementById("Promotion_ER").innerHTML =
+//       "You must check yes or no";
+//   } else {
+//     document.getElementById("Promotion_ER").innerHTML = "";
+//     arr.push(true);
+//   }
+// }
 function HideModal() {
   document.getElementById("modal").style.display = "none";
   document.getElementById("Product_form").style.display = "block";
